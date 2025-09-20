@@ -23,7 +23,7 @@ const About = () => {
 
   return (
     <section id="about" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container-responsive">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -31,24 +31,26 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Me</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Me</h2>
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
             I'm a passionate full-stack developer with over 5 years of experience creating digital solutions
             that make a difference. I specialize in modern web technologies and love bringing ideas to life.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            className="order-2 md:order-1"
           >
             <img
               src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
               alt="Profile"
-              className="w-full max-w-md mx-auto rounded-2xl shadow-2xl"
+              className="w-full max-w-sm md:max-w-md mx-auto rounded-2xl shadow-2xl"
+              loading="lazy"
             />
           </motion.div>
 
@@ -57,24 +59,24 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="space-y-6"
+            className="space-y-6 order-1 md:order-2 px-4 md:px-0"
           >
-            <h3 className="text-2xl font-bold text-gray-900">My Journey</h3>
-            <p className="text-gray-600 leading-relaxed">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900">My Journey</h3>
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
               Started as a curious student who loved solving problems with code. Over the years,
               I've worked with startups and established companies, building everything from
               simple websites to complex web applications.
             </p>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
               I'm constantly learning new technologies and staying up-to-date with the latest
               industry trends. When I'm not coding, you can find me contributing to open-source
               projects or mentoring aspiring developers.
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2 sm:gap-3">
               {['React', 'TypeScript', 'Node.js', 'Python', 'PostgreSQL', 'AWS'].map((tech) => (
                 <span
                   key={tech}
-                  className="px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium"
+                  className="px-3 sm:px-4 py-1 sm:py-2 bg-blue-50 text-blue-700 rounded-full text-xs sm:text-sm font-medium"
                 >
                   {tech}
                 </span>
@@ -83,7 +85,7 @@ const About = () => {
           </motion.div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 px-4 md:px-0">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -91,13 +93,13 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="text-center p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300"
+              className="text-center p-4 sm:p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 text-white rounded-full mb-4">
-                <feature.icon size={24} />
+              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-blue-600 text-white rounded-full mb-4">
+                <feature.icon size={20} className="sm:w-6 sm:h-6" />
               </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h4>
-              <p className="text-gray-600">{feature.description}</p>
+              <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">{feature.title}</h4>
+              <p className="text-sm sm:text-base text-gray-600">{feature.description}</p>
             </motion.div>
           ))}
         </div>

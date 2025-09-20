@@ -56,7 +56,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container-responsive">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -64,13 +64,13 @@ const Projects = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
             Here are some of my recent projects that showcase my skills and experience
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -78,13 +78,14 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
+              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group hover:-translate-y-1"
             >
               <div className="relative overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-40 sm:h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
                   <motion.a
@@ -92,6 +93,9 @@ const Projects = () => {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-white text-gray-900 p-2 rounded-full hover:bg-gray-100 transition-colors duration-300"
+                    aria-label={`View live demo of ${project.title}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <ExternalLink size={20} />
                   </motion.a>
@@ -100,19 +104,22 @@ const Projects = () => {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-white text-gray-900 p-2 rounded-full hover:bg-gray-100 transition-colors duration-300"
+                    aria-label={`View source code of ${project.title}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Github size={20} />
                   </motion.a>
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
+              <div className="p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
+                <p className="text-gray-600 mb-4 text-xs sm:text-sm leading-relaxed line-clamp-3">{project.description}</p>
+                <div className="flex flex-wrap gap-1 sm:gap-2">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
+                      className="px-2 sm:px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
                     >
                       {tag}
                     </span>
