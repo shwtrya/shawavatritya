@@ -16,11 +16,11 @@ const Footer = () => {
             transition={{ duration: 0.8 }}
           >
             <h3 className="text-2xl font-bold mb-4">
-              John<span className="text-blue-400">Doe</span>
+              Shawava<span className="text-blue-400">Tritya</span>
             </h3>
             <p className="text-gray-400 leading-relaxed">
-              Full Stack Developer passionate about creating beautiful, functional, 
-              and user-friendly applications that make a difference.
+              Pelajar SMK Teknik Komputer dan Jaringan yang passionate dalam bidang teknologi, 
+              Arduino, IoT, dan pengolahan data dengan fokus pada kualitas dan ketelitian.
             </p>
           </motion.div>
 
@@ -61,21 +61,25 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Connect With Me</h4>
             <div className="flex md:justify-end space-x-4">
               <motion.a
-                href="https://github.com"
+                href="https://github.com/CyXd404"
                 whileHover={{ scale: 1.1, y: -2 }}
                 className="text-gray-400 hover:text-white transition-colors duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Github size={24} />
               </motion.a>
               <motion.a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/shawava-tritya"
                 whileHover={{ scale: 1.1, y: -2 }}
                 className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Linkedin size={24} />
               </motion.a>
               <motion.a
-                href="mailto:john.doe@example.com"
+                href="mailto:shawavatritya@gmail.com"
                 whileHover={{ scale: 1.1, y: -2 }}
                 className="text-gray-400 hover:text-emerald-400 transition-colors duration-300"
               >
@@ -93,7 +97,7 @@ const Footer = () => {
           className="border-t border-gray-800 pt-8 text-center"
         >
           <p className="text-gray-400 flex items-center justify-center space-x-1">
-            <span>© {currentYear} John Doe. Made with</span>
+            <span>© {currentYear} Shawava Tritya. Made with</span>
             <Heart size={16} className="text-red-500" />
             <span>and lots of coffee</span>
           </p>

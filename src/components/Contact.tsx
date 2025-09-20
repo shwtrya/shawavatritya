@@ -43,19 +43,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'john.doe@example.com',
-      link: 'mailto:john.doe@example.com'
+      value: 'shawavatritya@gmail.com',
+      link: 'mailto:shawavatritya@gmail.com'
     },
     {
       icon: Phone,
-      title: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      title: 'WhatsApp',
+      value: '085187805786',
+      link: 'https://wa.me/6285187805786'
     },
     {
       icon: MapPin,
-      title: 'Location',
-      value: 'San Francisco, CA',
+      title: 'Domisili',
+      value: 'Cileungsi, Kab. Bogor, Jawa Barat',
       link: '#'
     }
   ];
@@ -88,9 +88,9 @@ const Contact = () => {
               <div>
                 <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Let's talk about your project</h3>
                 <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                  I'm always interested in new opportunities and exciting projects. 
-                  Whether you're a startup looking to build your first product or an 
-                  established company wanting to improve your digital presence, I'd love to help.
+                  Saya selalu tertarik dengan peluang baru dan proyek yang menarik. 
+                  Baik Anda membutuhkan bantuan dalam bidang teknologi, data entry, atau 
+                  instalasi jaringan, saya siap membantu dengan kemampuan terbaik saya.
                 </p>
               </div>
 

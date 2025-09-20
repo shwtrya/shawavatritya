@@ -28,7 +28,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-              Hi, I'm <span className="text-blue-600">John Doe</span>
+              Hi, I'm <span className="text-blue-600">Shawava Tritya</span>
             </h1>
           </motion.div>
 
@@ -38,7 +38,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-4">
-              Welcome to my portfolio! I'm a passionate <span className="font-semibold text-gray-800">Full Stack Developer</span> with 5+ years of experience creating innovative digital solutions.
+              Welcome to my portfolio! I'm a passionate <span className="font-semibold text-gray-800">SMK Student – Computer and Network Engineering</span> | Project Developer & Data Enthusiast.
             </p>
           </motion.div>
 

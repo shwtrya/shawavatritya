@@ -48,11 +48,11 @@ const Header = () => {
   }, [isMobileMenuOpen]);
 
   const downloadCV = () => {
-    const cvUrl = '/John_Doe_CV.pdf'; // Place your PDF file in the public folder
+    const cvUrl = '/Shawava_Tritya_CV.pdf'; // Place your PDF file in the public folder
 
     const link = document.createElement('a');
     link.href = cvUrl;
-    link.download = 'John_Doe_CV.pdf';
+    link.download = 'Shawava_Tritya_CV.pdf';
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
     document.body.appendChild(link);
@@ -86,7 +86,7 @@ const Header = () => {
             className="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors duration-300"
             aria-label="Go to homepage"
           >
-            John<span className="text-blue-600">Doe</span>
+            Shawava<span className="text-blue-600">Tritya</span>
           </Link>
 
           {/* Desktop Navigation */}

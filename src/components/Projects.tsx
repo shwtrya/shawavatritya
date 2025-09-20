@@ -5,50 +5,18 @@ import { ExternalLink, Github } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A modern e-commerce platform built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.',
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600',
-      tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
+      title: 'Smart Home Berbasis Arduino Uno',
+      description: 'Proyek merakit sistem yang dapat memonitor lampu dan suhu ruangan, serta mengontrol perangkat elektronik dari jarak jauh menggunakan mikrokontroler Arduino.',
+      image: 'https://images.pexels.com/photos/159201/arduino-electronics-computer-board-159201.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600',
+      tags: ['Arduino', 'IoT', 'Sensors', 'Remote Control'],
       liveLink: '#',
       githubLink: '#'
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-      image: 'https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600',
-      tags: ['React', 'Socket.io', 'Express', 'MongoDB'],
-      liveLink: '#',
-      githubLink: '#'
-    },
-    {
-      title: 'Weather Dashboard',
-      description: 'A beautiful weather dashboard that provides detailed weather information with interactive charts and location-based forecasts.',
-      image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600',
-      tags: ['React', 'Chart.js', 'Weather API', 'Tailwind'],
-      liveLink: '#',
-      githubLink: '#'
-    },
-    {
-      title: 'Social Media Analytics',
-      description: 'An analytics dashboard for social media managers to track performance metrics, engagement rates, and audience insights.',
-      image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600',
-      tags: ['React', 'D3.js', 'Python', 'FastAPI'],
-      liveLink: '#',
-      githubLink: '#'
-    },
-    {
-      title: 'Recipe Sharing Platform',
-      description: 'A community-driven platform where users can share, discover, and rate recipes with advanced search and filtering capabilities.',
-      image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600',
-      tags: ['React', 'Node.js', 'MongoDB', 'Cloudinary'],
-      liveLink: '#',
-      githubLink: '#'
-    },
-    {
-      title: 'Fitness Tracker',
-      description: 'A comprehensive fitness tracking application with workout logging, progress tracking, and personalized workout recommendations.',
-      image: 'https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600',
-      tags: ['React Native', 'Firebase', 'Redux', 'Chart.js'],
+      title: 'Instalasi ISP hingga Router',
+      description: 'Membuat pengaturan perangkat dan jaringan ISP secara teknis, dari sisi instalasi sampai konfigurasi router, dikerjakan dalam waktu 3 bulan.',
+      image: 'https://images.pexels.com/photos/159304/network-cable-ethernet-computer-159304.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600',
+      tags: ['Network', 'ISP', 'Router', 'Configuration'],
       liveLink: '#',
       githubLink: '#'
     }

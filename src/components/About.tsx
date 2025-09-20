@@ -6,18 +6,18 @@ const About = () => {
   const features = [
     {
       icon: Code,
-      title: 'Clean Code',
-      description: 'Writing maintainable, scalable, and efficient code is my passion.'
+      title: 'Technical Skills',
+      description: 'Menguasai Arduino, IoT, instalasi jaringan, dan data entry dengan teliti.'
     },
     {
       icon: Palette,
-      title: 'Great Design',
-      description: 'I believe in creating beautiful interfaces that users love to interact with.'
+      title: 'Problem Solving',
+      description: 'Mampu menganalisis dan menyelesaikan masalah teknis dengan pendekatan sistematis.'
     },
     {
       icon: Zap,
-      title: 'Fast Performance',
-      description: 'Optimizing applications for speed and performance is always a priority.'
+      title: 'Team Work',
+      description: 'Bekerja dengan disiplin, teliti, dan bertanggung jawab dalam tim maupun individu.'
     }
   ];
 
@@ -33,8 +33,8 @@ const About = () => {
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Me</h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
-            I'm a passionate full-stack developer with over 5 years of experience creating digital solutions
-            that make a difference. I specialize in modern web technologies and love bringing ideas to life.
+            Saya adalah pelajar SMK Negeri 1 Cileungsi, jurusan Teknik Komputer dan Jaringan (Pelajar aktif 2023–2026). 
+            Saya memiliki minat besar di bidang teknologi, khususnya penggunaan mikrokontroler dan pengolahan data.
           </p>
         </motion.div>
 
@@ -63,17 +63,16 @@ const About = () => {
           >
             <h3 className="text-xl sm:text-2xl font-bold text-gray-900">My Journey</h3>
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-              Started as a curious student who loved solving problems with code. Over the years,
-              I've worked with startups and established companies, building everything from
-              simple websites to complex web applications.
+              Sejak kecil, saya sudah tertarik dengan gadget dan teknologi. Di SMK, saya memilih jurusan 
+              Teknik Komputer dan Jaringan untuk mengembangkan kemampuan praktis saya. Selama ini, saya belajar 
+              merakit sistem berbasis Arduino, memonitor suhu dan lampu dari jarak jauh.
             </p>
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-              I'm constantly learning new technologies and staying up-to-date with the latest
-              industry trends. When I'm not coding, you can find me contributing to open-source
-              projects or mentoring aspiring developers.
+              Saya juga memahami instalasi jaringan ISP sampai ke router. Di samping itu, pengalaman kerja 
+              dan freelance memberikan saya wawasan tentang dunia industri dan pentingnya ketelitian serta efisiensi.
             </p>
             <div className="flex flex-wrap gap-2 sm:gap-3">
-              {['React', 'TypeScript', 'Node.js', 'Python', 'PostgreSQL', 'AWS'].map((tech) => (
+              {['Arduino', 'IoT', 'Data Entry', 'Network Installation', 'Microsoft Office', 'Production'].map((tech) => (
                 <span
                   key={tech}
                   className="px-3 sm:px-4 py-1 sm:py-2 bg-blue-50 text-blue-700 rounded-full text-xs sm:text-sm font-medium"

@@ -5,54 +5,39 @@ import { GraduationCap, Calendar, MapPin, Award } from 'lucide-react';
 const Education = () => {
   const education = [
     {
-      degree: 'Master of Science in Computer Science',
-      school: 'Stanford University',
-      location: 'Stanford, CA',
-      period: '2016 - 2018',
-      gpa: '3.8/4.0',
-      description: 'Specialized in Software Engineering and Machine Learning. Completed thesis on "Optimizing Web Application Performance using Modern JavaScript Frameworks".',
+      degree: 'Teknik Komputer dan Jaringan',
+      school: 'SMK Negeri 1 Cileungsi',
+      location: 'Cileungsi, Bogor',
+      period: '2023 - 2026',
+      gpa: 'Pelajar Aktif',
+      description: 'Mempelajari instalasi jaringan, konfigurasi perangkat, pemrograman mikrokontroler, dan sistem komputer. Fokus pada pengembangan kemampuan praktis di bidang teknologi informasi.',
       achievements: [
-        'Dean\'s List for 3 consecutive semesters',
-        'Graduate Teaching Assistant for Web Development course',
-        'Published research paper on React performance optimization'
+        'Aktif dalam praktikum Arduino dan IoT',
+        'Pengalaman magang di bidang produksi',
+        'Freelance data entry dengan tingkat akurasi tinggi'
       ],
-      coursework: ['Advanced Algorithms', 'Machine Learning', 'Database Systems', 'Software Architecture', 'Human-Computer Interaction']
-    },
-    {
-      degree: 'Bachelor of Science in Computer Science',
-      school: 'University of California, Berkeley',
-      location: 'Berkeley, CA',
-      period: '2012 - 2016',
-      gpa: '3.7/4.0',
-      description: 'Strong foundation in computer science fundamentals with focus on web development and software engineering principles.',
-      achievements: [
-        'Magna Cum Laude graduate',
-        'President of Computer Science Student Association',
-        'Winner of Annual Hackathon 2015',
-        'Volunteer tutor for introductory programming courses'
-      ],
-      coursework: ['Data Structures', 'Computer Networks', 'Operating Systems', 'Web Development', 'Software Engineering']
+      coursework: ['Instalasi Jaringan', 'Arduino Programming', 'Network Configuration', 'Computer Systems', 'Data Management']
     }
   ];
 
   const certifications = [
     {
-      name: 'AWS Certified Solutions Architect',
-      issuer: 'Amazon Web Services',
-      date: '2023',
-      credentialId: 'AWS-CSA-2023-001'
+      name: 'Hard Skills',
+      issuer: 'Data Entry · Produksi · Arduino & IoT · Instalasi Jaringan',
+      date: '',
+      credentialId: ''
     },
     {
-      name: 'Google Cloud Professional Developer',
-      issuer: 'Google Cloud',
-      date: '2022',
-      credentialId: 'GCP-PD-2022-045'
+      name: 'Soft Skills',
+      issuer: 'Teliti · Disiplin · Komunikasi · Kerja Tim',
+      date: '',
+      credentialId: ''
     },
     {
-      name: 'React Developer Certification',
-      issuer: 'Meta',
-      date: '2021',
-      credentialId: 'META-RDC-2021-789'
+      name: 'Software & Tools',
+      issuer: 'Microsoft Office (Word, Excel, PowerPoint)',
+      date: '',
+      credentialId: ''
     }
   ];
 
@@ -68,7 +53,7 @@ const Education = () => {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Education & Certifications</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            My academic background and professional certifications
+            Latar belakang pendidikan dan keahlian saya
           </p>
         </motion.div>
 
@@ -81,7 +66,7 @@ const Education = () => {
             transition={{ duration: 0.6 }}
             className="text-2xl font-bold text-gray-900 mb-8 text-center"
           >
-            Academic Background
+            Pendidikan
           </motion.h3>
           
           <div className="space-y-8">
@@ -168,7 +153,7 @@ const Education = () => {
             transition={{ duration: 0.6 }}
             className="text-2xl font-bold text-gray-900 mb-8 text-center"
           >
-            Professional Certifications
+            Skills & Keahlian
           </motion.h3>
           
           <div className="grid md:grid-cols-3 gap-6">
@@ -186,8 +171,8 @@ const Education = () => {
                 </div>
                 <h4 className="text-lg font-bold text-gray-900 mb-2">{cert.name}</h4>
                 <p className="text-blue-600 font-semibold mb-2">{cert.issuer}</p>
-                <p className="text-gray-600 text-sm mb-2">Issued: {cert.date}</p>
-                <p className="text-gray-500 text-xs">ID: {cert.credentialId}</p>
+                {cert.date && <p className="text-gray-600 text-sm mb-2">Issued: {cert.date}</p>}
+                {cert.credentialId && <p className="text-gray-500 text-xs">ID: {cert.credentialId}</p>}
               </motion.div>
             ))}
           </div>

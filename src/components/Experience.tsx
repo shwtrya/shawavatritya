@@ -5,56 +5,30 @@ import { Calendar, MapPin, Building } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
-      title: 'Senior Full Stack Developer',
-      company: 'TechCorp Solutions',
-      location: 'San Francisco, CA',
-      period: '2022 - Present',
+      title: 'Operator Produksi Tas',
+      company: 'PT Serin Indonesia',
+      location: 'Bekasi',
+      period: 'Juni - September 2025',
       description: [
-        'Led development of multiple web applications serving 100K+ users',
-        'Improved application performance by 40% through code optimization',
-        'Mentored 5 junior developers and conducted code reviews',
-        'Implemented CI/CD pipelines reducing deployment time by 60%'
+        'Memasang aksesoris silinder pada zipper tas',
+        'Mengaplikasikan lem pada bahan tas sebelum dijahit',
+        'Membantu proses produksi sesuai standar kerja',
+        'Menjaga kebersihan area kerja'
       ],
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'AWS', 'Docker']
+      technologies: ['Production', 'Quality Control', 'Manufacturing', 'Teamwork']
     },
     {
-      title: 'Full Stack Developer',
-      company: 'StartupXYZ',
-      location: 'Remote',
-      period: '2020 - 2022',
+      title: 'Data Entry',
+      company: 'PT Wova Group Indonesia',
+      location: 'Cileungsi',
+      period: '2023 - 2025',
       description: [
-        'Built and maintained e-commerce platform from scratch',
-        'Developed RESTful APIs handling 10K+ requests per day',
-        'Collaborated with design team to implement responsive UI/UX',
-        'Integrated third-party payment systems and analytics tools'
+        'Menginput dan memvalidasi data pelanggan',
+        'Menyusun laporan data secara rapi dan akurat',
+        'Menjaga kecepatan dan ketelitian dalam entri data',
+        'Mendukung administrasi tim dengan sistem digital'
       ],
-      technologies: ['React', 'Express', 'MongoDB', 'Stripe', 'Google Analytics']
-    },
-    {
-      title: 'Frontend Developer',
-      company: 'Digital Agency Pro',
-      location: 'New York, NY',
-      period: '2019 - 2020',
-      description: [
-        'Created responsive websites for 20+ clients across various industries',
-        'Optimized website loading speeds by 50% on average',
-        'Worked closely with designers to pixel-perfect implementations',
-        'Maintained and updated existing client websites'
-      ],
-      technologies: ['JavaScript', 'HTML5', 'CSS3', 'jQuery', 'WordPress']
-    },
-    {
-      title: 'Junior Web Developer',
-      company: 'WebDev Studio',
-      location: 'Los Angeles, CA',
-      period: '2018 - 2019',
-      description: [
-        'Assisted in developing custom web applications',
-        'Fixed bugs and implemented new features in existing projects',
-        'Learned modern development practices and version control',
-        'Participated in daily standups and sprint planning'
-      ],
-      technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL']
+      technologies: ['Microsoft Office', 'Data Entry', 'Excel', 'Administration']
     }
   ];
 
