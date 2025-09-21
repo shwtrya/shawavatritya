@@ -33,20 +33,20 @@ const Footer = () => {
           >
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <div className="space-y-2">
-              <a href="/about" className="block text-gray-400 hover:text-white transition-colors duration-300">
-                About
+              <a href="/about" className="block text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus:text-white">
+                Tentang
               </a>
-              <a href="/experience" className="block text-gray-400 hover:text-white transition-colors duration-300">
-                Experience
+              <a href="/experience" className="block text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus:text-white">
+                Pengalaman
               </a>
-              <a href="/projects" className="block text-gray-400 hover:text-white transition-colors duration-300">
-                Projects
+              <a href="/projects" className="block text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus:text-white">
+                Proyek
               </a>
-              <a href="/education" className="block text-gray-400 hover:text-white transition-colors duration-300">
-                Education
+              <a href="/education" className="block text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus:text-white">
+                Pendidikan
               </a>
-              <a href="/contact" className="block text-gray-400 hover:text-white transition-colors duration-300">
-                Contact
+              <a href="/contact" className="block text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus:text-white">
+                Kontak
               </a>
             </div>
           </motion.div>
@@ -58,30 +58,33 @@ const Footer = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="md:text-right"
           >
-            <h4 className="text-lg font-semibold mb-4">Connect With Me</h4>
+            <h4 className="text-lg font-semibold mb-4">Terhubung Dengan Saya</h4>
             <div className="flex md:justify-end space-x-4">
               <motion.a
                 href="https://github.com/CyXd404"
                 whileHover={{ scale: 1.1, y: -2 }}
-                className="text-gray-400 hover:text-white transition-colors duration-300"
+                className="text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit GitHub profile"
               >
                 <Github size={24} />
               </motion.a>
               <motion.a
                 href="https://www.linkedin.com/in/shawava-tritya"
                 whileHover={{ scale: 1.1, y: -2 }}
-                className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
+                className="text-gray-400 hover:text-blue-400 transition-colors duration-300 focus:outline-none focus:text-blue-400 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit LinkedIn profile"
               >
                 <Linkedin size={24} />
               </motion.a>
               <motion.a
                 href="mailto:shawavatritya@gmail.com"
                 whileHover={{ scale: 1.1, y: -2 }}
-                className="text-gray-400 hover:text-emerald-400 transition-colors duration-300"
+                className="text-gray-400 hover:text-emerald-400 transition-colors duration-300 focus:outline-none focus:text-emerald-400 focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+                aria-label="Send email"
               >
                 <Mail size={24} />
               </motion.a>
@@ -99,7 +102,7 @@ const Footer = () => {
           <p className="text-gray-400 flex items-center justify-center space-x-1">
             <span>© {currentYear} Shawava Tritya. Made with</span>
             <Heart size={16} className="text-red-500" />
-            <span>and lots of coffee</span>
+            <span>dan banyak kopi</span>
           </p>
         </motion.div>
       </div>

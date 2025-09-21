@@ -61,12 +61,12 @@ const Header = () => {
   };
 
   const navItems = [
-    { path: '/home', label: 'Home' },
-    { path: '/about', label: 'About' },
-    { path: '/experience', label: 'Experience' },
-    { path: '/projects', label: 'Projects' },
-    { path: '/education', label: 'Education' },
-    { path: '/contact', label: 'Contact' },
+    { path: '/home', label: 'Beranda' },
+    { path: '/about', label: 'Tentang' },
+    { path: '/experience', label: 'Pengalaman' },
+    { path: '/projects', label: 'Proyek' },
+    { path: '/education', label: 'Pendidikan' },
+    { path: '/contact', label: 'Kontak' },
   ];
 
   return (
@@ -123,7 +123,7 @@ const Header = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={downloadCV}
-              className="hidden md:flex items-center space-x-2 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300"
+              className="hidden md:flex items-center space-x-2 bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               aria-label="Download CV"
             >
               <Download size={18} />
@@ -133,7 +133,7 @@ const Header = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden text-gray-700 p-2 hover:bg-gray-100 rounded-lg transition-colors duration-300"
+              className="md:hidden text-gray-700 p-2 hover:bg-gray-100 rounded-lg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isMobileMenuOpen}
             >
@@ -200,7 +200,7 @@ const Header = () => {
                     downloadCV();
                     setIsMobileMenuOpen(false);
                   }}
-                  className="w-full flex items-center justify-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300"
+                  className="w-full flex items-center justify-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                   aria-label="Download CV"
                 >
                   <Download size={18} />

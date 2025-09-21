@@ -42,9 +42,9 @@ const Experience = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Work Experience</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Pengalaman Kerja</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            My professional journey and the experiences that shaped my career
+            Perjalanan profesional dan pengalaman yang membentuk karier saya
           </p>
         </motion.div>
 
@@ -58,12 +58,12 @@ const Experience = () => {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className="bg-gray-50 rounded-xl p-6 md:p-8 hover:shadow-lg transition-shadow duration-300"
             >
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
                 <div className="flex-1">
                   <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
                     {experience.title}
                   </h3>
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 text-gray-600 mb-4">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-6 text-gray-600 mb-4">
                     <div className="flex items-center space-x-2 mb-2 sm:mb-0">
                       <Building size={16} />
                       <span className="font-medium">{experience.company}</span>
@@ -83,17 +83,17 @@ const Experience = () => {
               <ul className="space-y-2 mb-6">
                 {experience.description.map((item, itemIndex) => (
                   <li key={itemIndex} className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2.5 flex-shrink-0"></div>
                     <span className="text-gray-700 leading-relaxed">{item}</span>
                   </li>
                 ))}
               </ul>
 
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 sm:gap-3">
                 {experience.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium"
+                    className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors duration-200"
                   >
                     {tech}
                   </span>

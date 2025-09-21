@@ -23,15 +23,32 @@ body {
 
 /* Improved focus accessibility */
 *:focus {
-  outline: 2px solid #3B82F6;
+  outline: 2px solid #3B82F6 !important;
   outline-offset: 2px;
 }
 
 /* Button focus improvements */
 button:focus,
 a:focus {
-  outline: 2px solid #3B82F6;
+  outline: 2px solid #3B82F6 !important;
   outline-offset: 2px;
+}
+
+/* Skip to main content link for screen readers */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #3B82F6;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
 }
 
 /* Custom animations */
@@ -114,14 +131,15 @@ a:focus {
 input,
 textarea,
 select {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+  border-color: #3B82F6 !important;
 }
 
 /* Loading animation for images */
@@ -129,14 +147,6 @@ img {
   transition: opacity 0.3s ease-in-out;
   max-width: 100%;
   height: auto;
-}
-
-img[loading="lazy"] {
-  opacity: 0;
-}
-
-img[loading="lazy"].loaded {
-  opacity: 1;
 }
 
 /* Responsive utilities */
@@ -159,6 +169,27 @@ img[loading="lazy"].loaded {
   }
 }
 
+/* Smooth hover transitions */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Text selection styling */
+::selection {
+  background-color: #3B82F6;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #3B82F6;
+  color: white;
+}
+
 /* Print styles */
 @media print {
   .no-print {
@@ -173,6 +204,14 @@ img[loading="lazy"].loaded {
   h1, h2, h3, h4, h5, h6 {
     page-break-after: avoid;
   }
+  
+  a {
+    text-decoration: underline;
+  }
+  
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+  }
 }
 
 /* High contrast mode support */
@@ -183,5 +222,38 @@ img[loading="lazy"].loaded {
   
   .text-gray-600 {
     color: black;
+  }
+  
+  .border-gray-100 {
+    border-color: #000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus visible for better keyboard navigation */
+.focus-visible:focus {
+  outline: 2px solid #3B82F6;
+  outline-offset: 2px;
+}
+
+/* Ensure minimum touch target size for mobile */
+@media (max-width: 768px) {
+  button,
+  a,
+  input,
+  textarea {
+    min-height: 44px;
+    min-width: 44px;
   }
 }

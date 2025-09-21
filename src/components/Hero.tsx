@@ -5,11 +5,11 @@ import { ArrowRight, Github, Linkedin, Mail, User, Briefcase, FolderOpen, Gradua
 
 const Hero = () => {
   const navigationFlow = [
-    { path: '/about', label: 'About Me', icon: User, description: 'Learn about my background' },
-    { path: '/experience', label: 'Experience', icon: Briefcase, description: 'My professional journey' },
-    { path: '/projects', label: 'Projects', icon: FolderOpen, description: 'See my work' },
-    { path: '/education', label: 'Education', icon: GraduationCap, description: 'Academic background' },
-    { path: '/contact', label: 'Contact', icon: MessageCircle, description: 'Get in touch' }
+    { path: '/about', label: 'Tentang Saya', icon: User, description: 'Pelajari latar belakang saya' },
+    { path: '/experience', label: 'Pengalaman', icon: Briefcase, description: 'Perjalanan profesional saya' },
+    { path: '/projects', label: 'Proyek', icon: FolderOpen, description: 'Lihat karya saya' },
+    { path: '/education', label: 'Pendidikan', icon: GraduationCap, description: 'Latar belakang akademis' },
+    { path: '/contact', label: 'Kontak', icon: MessageCircle, description: 'Hubungi saya' }
   ];
 
   return (
@@ -37,8 +37,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-4">
-              Welcome to my portfolio! I'm a passionate <span className="font-semibold text-gray-800">SMK Student – Computer and Network Engineering</span> | Project Developer & Data Enthusiast.
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed px-4">
+              Selamat datang di portofolio saya! Saya adalah <span className="font-semibold text-gray-800">Pelajar SMK – Teknik Komputer dan Jaringan</span> yang passionate sebagai Project Developer & Data Enthusiast.
             </p>
           </motion.div>
 
@@ -49,7 +49,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mb-8 sm:mb-12"
           >
-            <h2 className="text-base sm:text-lg font-semibold text-gray-700 mb-4 sm:mb-6 px-4">Explore my journey:</h2>
+            <h2 className="text-base sm:text-lg font-semibold text-gray-700 mb-4 sm:mb-6 px-4">Jelajahi perjalanan saya:</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4 max-w-5xl mx-auto px-4">
               {navigationFlow.map((item, index) => (
                 <motion.div
@@ -60,7 +60,7 @@ const Hero = () => {
                 >
                   <Link
                     to={item.path}
-                    className="group block p-3 sm:p-4 bg-white rounded-xl shadow-sm hover:shadow-md border border-gray-100 hover:border-blue-200 transition-all duration-300 h-full"
+                    className="group block p-3 sm:p-4 bg-white rounded-xl shadow-sm hover:shadow-lg border border-gray-100 hover:border-blue-200 transition-all duration-300 h-full transform hover:-translate-y-1"
                     aria-label={`Navigate to ${item.label}: ${item.description}`}
                   >
                     <div className="flex flex-col items-center text-center space-y-2">
@@ -90,15 +90,15 @@ const Hero = () => {
           >
             <Link
               to="/projects"
-              className="w-full sm:w-auto bg-blue-600 text-white px-6 sm:px-8 py-3 rounded-lg text-base sm:text-lg font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105 hover:shadow-lg text-center"
+              className="w-full sm:w-auto bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105 hover:shadow-lg text-center min-w-[160px]"
             >
-              View My Work
+              Lihat Karya Saya
             </Link>
             <Link
               to="/contact"
-              className="w-full sm:w-auto border-2 border-gray-300 text-gray-700 px-6 sm:px-8 py-3 rounded-lg text-base sm:text-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition-all duration-300 hover:scale-105 text-center"
+              className="w-full sm:w-auto border-2 border-gray-300 text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition-all duration-300 hover:scale-105 text-center min-w-[160px]"
             >
-              Get In Touch
+              Hubungi Saya
             </Link>
           </motion.div>
 
@@ -110,32 +110,32 @@ const Hero = () => {
             className="flex justify-center space-x-4 sm:space-x-6 px-4"
           >
             <motion.a
-              href="https://github.com"
+              href="https://github.com/CyXd404"
               whileHover={{ scale: 1.1, y: -2 }}
-              className="p-2 sm:p-3 bg-white rounded-full shadow-sm hover:shadow-md text-gray-600 hover:text-gray-900 transition-all duration-300"
+              className="p-3 sm:p-4 bg-white rounded-full shadow-sm hover:shadow-lg text-gray-600 hover:text-gray-900 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               aria-label="Visit GitHub profile"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Github size={24} className="sm:w-7 sm:h-7" />
+              <Github size={20} className="sm:w-6 sm:h-6" />
             </motion.a>
             <motion.a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/shawava-tritya"
               whileHover={{ scale: 1.1, y: -2 }}
-              className="p-2 sm:p-3 bg-white rounded-full shadow-sm hover:shadow-md text-gray-600 hover:text-blue-600 transition-all duration-300"
+              className="p-3 sm:p-4 bg-white rounded-full shadow-sm hover:shadow-lg text-gray-600 hover:text-blue-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               aria-label="Visit LinkedIn profile"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Linkedin size={24} className="sm:w-7 sm:h-7" />
+              <Linkedin size={20} className="sm:w-6 sm:h-6" />
             </motion.a>
             <motion.a
-              href="mailto:john.doe@example.com"
+              href="mailto:shawavatritya@gmail.com"
               whileHover={{ scale: 1.1, y: -2 }}
-              className="p-2 sm:p-3 bg-white rounded-full shadow-sm hover:shadow-md text-gray-600 hover:text-emerald-600 transition-all duration-300"
+              className="p-3 sm:p-4 bg-white rounded-full shadow-sm hover:shadow-lg text-gray-600 hover:text-emerald-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               aria-label="Send email"
             >
-              <Mail size={24} className="sm:w-7 sm:h-7" />
+              <Mail size={20} className="sm:w-6 sm:h-6" />
             </motion.a>
           </motion.div>
         </div>

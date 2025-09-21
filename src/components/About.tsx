@@ -44,12 +44,12 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="order-2 md:order-1"
+            className="order-2 md:order-1 px-4 md:px-0"
           >
             <img
               src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
-              alt="Profile"
-              className="w-full max-w-sm md:max-w-md mx-auto rounded-2xl shadow-2xl"
+              alt="Shawava Tritya - Pelajar SMK Teknik Komputer dan Jaringan"
+              className="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300"
               loading="lazy"
             />
           </motion.div>
@@ -61,21 +61,22 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6 order-1 md:order-2 px-4 md:px-0"
           >
-            <h3 className="text-xl sm:text-2xl font-bold text-gray-900">My Journey</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Perjalanan Saya</h3>
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
               Sejak kecil, saya sudah tertarik dengan gadget dan teknologi. Di SMK, saya memilih jurusan 
               Teknik Komputer dan Jaringan untuk mengembangkan kemampuan praktis saya. Selama ini, saya belajar 
-              merakit sistem berbasis Arduino, memonitor suhu dan lampu dari jarak jauh.
+              merakit sistem berbasis Arduino, memonitor suhu dan lampu dari jarak jauh, serta memahami instalasi jaringan.
             </p>
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-              Saya juga memahami instalasi jaringan ISP sampai ke router. Di samping itu, pengalaman kerja 
+              Di samping itu, pengalaman kerja 
               dan freelance memberikan saya wawasan tentang dunia industri dan pentingnya ketelitian serta efisiensi.
+              Saya selalu berusaha belajar dan berkembang agar siap menghadapi tantangan di dunia profesional.
             </p>
-            <div className="flex flex-wrap gap-2 sm:gap-3">
+            <div className="flex flex-wrap gap-2 sm:gap-3 mt-6">
               {['Arduino', 'IoT', 'Data Entry', 'Network Installation', 'Microsoft Office', 'Production'].map((tech) => (
                 <span
                   key={tech}
-                  className="px-3 sm:px-4 py-1 sm:py-2 bg-blue-50 text-blue-700 rounded-full text-xs sm:text-sm font-medium"
+                  className="px-3 sm:px-4 py-1 sm:py-2 bg-blue-50 text-blue-700 rounded-full text-xs sm:text-sm font-medium hover:bg-blue-100 transition-colors duration-200"
                 >
                   {tech}
                 </span>
@@ -94,11 +95,11 @@ const About = () => {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className="text-center p-4 sm:p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300"
             >
-              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-blue-600 text-white rounded-full mb-4">
+              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-blue-600 text-white rounded-full mb-4 hover:bg-blue-700 transition-colors duration-300">
                 <feature.icon size={20} className="sm:w-6 sm:h-6" />
               </div>
               <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">{feature.title}</h4>
-              <p className="text-sm sm:text-base text-gray-600">{feature.description}</p>
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{feature.description}</p>
             </motion.div>
           ))}
         </div>

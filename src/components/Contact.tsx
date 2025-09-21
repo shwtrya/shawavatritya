@@ -70,9 +70,9 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Hubungi Saya</h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
-            Have a project in mind or want to collaborate? I'd love to hear from you!
+            Punya proyek atau ingin berkolaborasi? Saya senang mendengar dari Anda!
           </p>
         </motion.div>
 
@@ -86,7 +86,7 @@ const Contact = () => {
           >
             <div className="space-y-8">
               <div>
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Let's talk about your project</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Mari diskusikan proyek Anda</h3>
                 <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                   Saya selalu tertarik dengan peluang baru dan proyek yang menarik. 
                   Baik Anda membutuhkan bantuan dalam bidang teknologi, data entry, atau 
@@ -99,14 +99,14 @@ const Contact = () => {
                   <motion.a
                     key={info.title}
                     href={info.link}
-                    whileHover={{ x: 5 }}
-                    className="flex items-center space-x-4 p-3 sm:p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 group"
+                    whileHover={{ x: 5, scale: 1.02 }}
+                    className="flex items-center space-x-4 p-4 sm:p-5 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                     {...(info.link.startsWith('http') && {
                       target: '_blank',
                       rel: 'noopener noreferrer'
                     })}
                   >
-                    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-blue-600 group-hover:bg-blue-700 text-white rounded-lg flex items-center justify-center transition-colors duration-300">
+                    <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-blue-600 group-hover:bg-blue-700 text-white rounded-lg flex items-center justify-center transition-colors duration-300">
                       <info.icon size={18} className="sm:w-5 sm:h-5" />
                     </div>
                     <div>
@@ -133,7 +133,7 @@ const Contact = () => {
                   animate={{ opacity: 1, y: 0 }}
                   className="p-4 bg-green-50 border border-green-200 rounded-lg"
                 >
-                  <p className="text-green-800 text-sm">Thank you! Your message has been sent successfully.</p>
+                  <p className="text-green-800 text-sm">Terima kasih! Pesan Anda telah berhasil dikirim.</p>
                 </motion.div>
               )}
               
@@ -143,14 +143,14 @@ const Contact = () => {
                   animate={{ opacity: 1, y: 0 }}
                   className="p-4 bg-red-50 border border-red-200 rounded-lg"
                 >
-                  <p className="text-red-800 text-sm">Sorry, there was an error sending your message. Please try again.</p>
+                  <p className="text-red-800 text-sm">Maaf, terjadi kesalahan saat mengirim pesan. Silakan coba lagi.</p>
                 </motion.div>
               )}
               
               <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm sm:text-base text-gray-700 font-medium mb-2">
-                    Name
+                    Nama
                   </label>
                   <input
                     type="text"
@@ -161,7 +161,7 @@ const Contact = () => {
                     required
                     disabled={isSubmitting}
                     className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                    placeholder="Your name"
+                    placeholder="Nama Anda"
                   />
                 </div>
                 <div>
@@ -177,13 +177,13 @@ const Contact = () => {
                     required
                     disabled={isSubmitting}
                     className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                    placeholder="your.email@example.com"
+                    placeholder="email.anda@example.com"
                   />
                 </div>
               </div>
               <div>
                 <label htmlFor="subject" className="block text-sm sm:text-base text-gray-700 font-medium mb-2">
-                  Subject
+                  Subjek
                 </label>
                 <input
                   type="text"
@@ -194,12 +194,12 @@ const Contact = () => {
                   required
                   disabled={isSubmitting}
                   className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                  placeholder="What's this about?"
+                  placeholder="Tentang apa ini?"
                 />
               </div>
               <div>
                 <label htmlFor="message" className="block text-sm sm:text-base text-gray-700 font-medium mb-2">
-                  Message
+                  Pesan
                 </label>
                 <textarea
                   id="message"
@@ -210,7 +210,7 @@ const Contact = () => {
                   rows={5}
                   disabled={isSubmitting}
                   className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-300 resize-none disabled:opacity-50 disabled:cursor-not-allowed"
-                  placeholder="Tell me about your project..."
+                  placeholder="Ceritakan tentang proyek Anda..."
                 />
               </div>
               <motion.button
@@ -221,7 +221,7 @@ const Contact = () => {
                 className="w-full bg-blue-600 text-white py-2 sm:py-3 px-6 rounded-lg text-sm sm:text-base font-semibold hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <Send size={18} className="sm:w-5 sm:h-5" />
-                <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                <span>{isSubmitting ? 'Mengirim...' : 'Kirim Pesan'}</span>
               </motion.button>
             </form>
           </motion.div>
