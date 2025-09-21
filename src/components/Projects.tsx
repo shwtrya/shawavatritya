@@ -7,18 +7,18 @@ const Projects = () => {
     {
       title: 'Smart Home Berbasis Arduino Uno',
       description: 'Proyek merakit sistem yang dapat memonitor lampu dan suhu ruangan, serta mengontrol perangkat elektronik dari jarak jauh menggunakan mikrokontroler Arduino.',
-      image: 'https://images.pexels.com/photos/159201/arduino-electronics-computer-board-159201.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600',
+      image: 'https://images.pexels.com/photos/15470542/pexels-photo-15470542.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600',
       tags: ['Arduino', 'IoT', 'Sensors', 'Remote Control'],
-      liveLink: '#',
-      githubLink: '#'
+      liveLink: 'https://github.com/CyXd404',
+      githubLink: 'https://github.com/CyXd404'
     },
     {
       title: 'Instalasi ISP hingga Router',
       description: 'Membuat pengaturan perangkat dan jaringan ISP secara teknis, dari sisi instalasi sampai konfigurasi router, dikerjakan dalam waktu 3 bulan.',
       image: 'https://images.pexels.com/photos/159304/network-cable-ethernet-computer-159304.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600',
       tags: ['Network', 'ISP', 'Router', 'Configuration'],
-      liveLink: '#',
-      githubLink: '#'
+      liveLink: 'https://github.com/CyXd404',
+      githubLink: 'https://github.com/CyXd404'
     }
   ];
 
