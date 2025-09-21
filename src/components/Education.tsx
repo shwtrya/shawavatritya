@@ -51,7 +51,7 @@ const Education = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Pendidikan & Keahlian</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Education & Skills</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Latar belakang pendidikan dan keahlian saya
           </p>
@@ -66,7 +66,7 @@ const Education = () => {
             transition={{ duration: 0.6 }}
             className="text-2xl font-bold text-gray-900 mb-8 text-center"
           >
-            Pendidikan
+            Education
           </motion.h3>
           
           <div className="space-y-8">
@@ -153,7 +153,7 @@ const Education = () => {
             transition={{ duration: 0.6 }}
             className="text-2xl font-bold text-gray-900 mb-8 text-center"
           >
-            Keahlian
+            Skills
           </motion.h3>
           
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
