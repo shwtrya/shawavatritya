@@ -34,19 +34,19 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <div className="space-y-2">
               <a href="/about" className="block text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus:text-white">
-                Tentang
+                About
               </a>
               <a href="/experience" className="block text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus:text-white">
-                Pengalaman
+                Experience
               </a>
               <a href="/projects" className="block text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus:text-white">
-                Proyek
+                Projects
               </a>
               <a href="/education" className="block text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus:text-white">
-                Pendidikan
+                Education
               </a>
               <a href="/contact" className="block text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus:text-white">
-                Kontak
+                Contact
               </a>
             </div>
           </motion.div>
