@@ -5,11 +5,11 @@ import { ArrowRight, Github, Linkedin, Mail, User, Briefcase, FolderOpen, Gradua
 
 const Hero = () => {
   const navigationFlow = [
-    { path: '/about', label: 'Tentang Saya', icon: User, description: 'Pelajari latar belakang saya' },
-    { path: '/experience', label: 'Pengalaman', icon: Briefcase, description: 'Perjalanan profesional saya' },
-    { path: '/projects', label: 'Proyek', icon: FolderOpen, description: 'Lihat karya saya' },
-    { path: '/education', label: 'Pendidikan', icon: GraduationCap, description: 'Latar belakang akademis' },
-    { path: '/contact', label: 'Kontak', icon: MessageCircle, description: 'Hubungi saya' }
+    { path: '/about', label: 'About Me', icon: User, description: 'Learn about me' },
+    { path: '/experience', label: 'Experience', icon: Briefcase, description: 'My career journey' },
+    { path: '/projects', label: 'Projects', icon: FolderOpen, description: 'View my work' },
+    { path: '/education', label: 'Education', icon: GraduationCap, description: 'Academic background' },
+    { path: '/contact', label: 'Contant', icon: MessageCircle, description: 'Contact me' }
   ];
 
   return (
@@ -92,13 +92,13 @@ const Hero = () => {
               to="/projects"
               className="w-full sm:w-auto bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105 hover:shadow-lg text-center min-w-[160px]"
             >
-              Lihat Karya Saya
+              View My Work
             </Link>
             <Link
               to="/contact"
               className="w-full sm:w-auto border-2 border-gray-300 text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition-all duration-300 hover:scale-105 text-center min-w-[160px]"
             >
-              Hubungi Saya
+              Get touch Me
             </Link>
           </motion.div>
 
