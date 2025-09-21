@@ -241,13 +241,10 @@ img {
 
 /* Focus visible for better keyboard navigation */
 .focus-visible:focus {
-  outline: none !important;
-}
-}
-
   outline: 2px solid #3B82F6 !important;
   outline-offset: 2px !important;
 }
+
 /* Ensure minimum touch target size for mobile */
 @media (max-width: 768px) {
   button,
@@ -256,6 +253,6 @@ img {
   textarea {
     min-height: 44px;
     min-width: 44px;
+    outline: none !important;
   }
-  outline: none !important;
 }
