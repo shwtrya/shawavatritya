@@ -23,15 +23,13 @@ body {
 
 /* Improved focus accessibility */
 *:focus {
-  outline: 2px solid #3B82F6 !important;
-  outline-offset: 2px;
+  outline: none !important;
 }
 
 /* Button focus improvements */
 button:focus,
 a:focus {
-  outline: 2px solid #3B82F6 !important;
-  outline-offset: 2px;
+  outline: none !important;
 }
 
 /* Skip to main content link for screen readers */
@@ -243,8 +241,8 @@ img {
 
 /* Focus visible for better keyboard navigation */
 .focus-visible:focus {
-  outline: 2px solid #3B82F6;
-  outline-offset: 2px;
+  outline: 2px solid #3B82F6 !important;
+  outline-offset: 2px !important;
 }
 
 /* Ensure minimum touch target size for mobile */
@@ -255,5 +253,6 @@ img {
   textarea {
     min-height: 44px;
     min-width: 44px;
+    outline: none !important;
   }
 }
