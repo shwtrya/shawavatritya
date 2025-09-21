@@ -60,7 +60,7 @@ const Projects = () => {
                     href={project.liveLink}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                     aria-label={`View live demo of ${project.title}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -71,7 +71,7 @@ const Projects = () => {
                     href={project.githubLink}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                     aria-label={`View source code of ${project.title}`}
                     target="_blank"
                     rel="noopener noreferrer"
