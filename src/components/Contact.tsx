@@ -56,7 +56,7 @@ const Contact = () => {
       icon: MapPin,
       title: 'Domisili',
       value: 'Cileungsi, Kab. Bogor, Jawa Barat',
-      link: '#'
+      link: 'https://maps.app.goo.gl/9UCcE1a2dkAqDWUq5'
     }
   ];
 
