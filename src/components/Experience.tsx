@@ -42,7 +42,7 @@ const Experience = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Pengalaman Kerja</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Work Experience</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Perjalanan profesional dan pengalaman yang membentuk karier saya
           </p>
