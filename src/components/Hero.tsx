@@ -60,7 +60,7 @@ const Hero = () => {
                 >
                   <Link
                     to={item.path}
-                    className="group block p-3 sm:p-4 bg-white rounded-xl shadow-sm hover:shadow-lg border border-gray-100 hover:border-blue-200 transition-all duration-300 h-full transform hover:-translate-y-1"
+                    className="group block p-3 sm:p-4 bg-white rounded-xl shadow-sm hover:shadow-lg border border-gray-100 hover:border-blue-200 transition-all duration-300 h-full transform hover:-translate-y-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                     aria-label={`Navigate to ${item.label}: ${item.description}`}
                   >
                     <div className="flex flex-col items-center text-center space-y-2">
@@ -90,13 +90,13 @@ const Hero = () => {
           >
             <Link
               to="/projects"
-              className="w-full sm:w-auto bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105 hover:shadow-lg text-center min-w-[160px]"
+              className="w-full sm:w-auto bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105 hover:shadow-lg text-center min-w-[160px] focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
             >
               View My Work
             </Link>
             <Link
               to="/contact"
-              className="w-full sm:w-auto border-2 border-gray-300 text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition-all duration-300 hover:scale-105 text-center min-w-[160px]"
+              className="w-full sm:w-auto border-2 border-gray-300 text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition-all duration-300 hover:scale-105 text-center min-w-[160px] focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
             >
               Get touch Me
             </Link>
@@ -112,7 +112,7 @@ const Hero = () => {
             <motion.a
               href="https://github.com/CyXd404"
               whileHover={{ scale: 1.1, y: -2 }}
-              className="p-3 sm:p-4 bg-white rounded-full shadow-sm hover:shadow-lg text-gray-600 hover:text-gray-900 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="p-3 sm:p-4 bg-white rounded-full shadow-sm hover:shadow-lg text-gray-600 hover:text-gray-900 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
               aria-label="Visit GitHub profile"
               target="_blank"
               rel="noopener noreferrer"
@@ -122,7 +122,7 @@ const Hero = () => {
             <motion.a
               href="https://www.linkedin.com/in/shawava-tritya"
               whileHover={{ scale: 1.1, y: -2 }}
-              className="p-3 sm:p-4 bg-white rounded-full shadow-sm hover:shadow-lg text-gray-600 hover:text-blue-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="p-3 sm:p-4 bg-white rounded-full shadow-sm hover:shadow-lg text-gray-600 hover:text-blue-600 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
               aria-label="Visit LinkedIn profile"
               target="_blank"
               rel="noopener noreferrer"
@@ -132,7 +132,7 @@ const Hero = () => {
             <motion.a
               href="mailto:shawavatritya@gmail.com"
               whileHover={{ scale: 1.1, y: -2 }}
-              className="p-3 sm:p-4 bg-white rounded-full shadow-sm hover:shadow-lg text-gray-600 hover:text-emerald-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="p-3 sm:p-4 bg-white rounded-full shadow-sm hover:shadow-lg text-gray-600 hover:text-emerald-600 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
               aria-label="Send email"
             >
               <Mail size={20} className="sm:w-6 sm:h-6" />
