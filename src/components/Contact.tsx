@@ -26,7 +26,6 @@ const Contact = () => {
     setSubmitStatus('idle');
     
     try {
-      // Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 1000));
       console.log('Form submitted:', formData);
       
@@ -77,6 +76,7 @@ const Contact = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+          {/* LEFT SIDE CONTACT INFO */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -115,10 +115,25 @@ const Contact = () => {
                     </div>
                   </motion.a>
                 ))}
+
+                {/* Tambah embed Google Maps */}
+                <div className="rounded-xl overflow-hidden shadow-md mt-6">
+                  <iframe
+                    title="Domisili Map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d993.1633390811642!2d106.9597323!3d-6.408152199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6994aa2aee1d2f%3A0x65a8f73c2e7c6f1e!2sCileungsi%2C%20Bogor%2C%20Jawa%20Barat!5e0!3m2!1sen!2sid!4v1690000000000!5m2!1sen!2sid"
+                    width="100%"
+                    height="250"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
               </div>
             </div>
           </motion.div>
 
+          {/* RIGHT SIDE FORM */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -146,7 +161,8 @@ const Contact = () => {
                   <p className="text-red-800 text-sm">Maaf, terjadi kesalahan saat mengirim pesan. Silakan coba lagi.</p>
                 </motion.div>
               )}
-              
+
+              {/* FORM FIELDS */}
               <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm sm:text-base text-gray-700 font-medium mb-2">
@@ -181,6 +197,7 @@ const Contact = () => {
                   />
                 </div>
               </div>
+
               <div>
                 <label htmlFor="subject" className="block text-sm sm:text-base text-gray-700 font-medium mb-2">
                   Subjek
@@ -197,6 +214,7 @@ const Contact = () => {
                   placeholder="Tentang apa ini?"
                 />
               </div>
+
               <div>
                 <label htmlFor="message" className="block text-sm sm:text-base text-gray-700 font-medium mb-2">
                   Pesan
@@ -213,6 +231,7 @@ const Contact = () => {
                   placeholder="Ceritakan tentang proyek Anda..."
                 />
               </div>
+
               <motion.button
                 type="submit"
                 whileHover={{ scale: 1.02 }}
