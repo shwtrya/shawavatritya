@@ -32,7 +32,7 @@ const Projects = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Proyek Unggulan</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">My Projects</h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
             Berikut adalah beberapa proyek terbaru saya yang menunjukkan kemampuan dan pengalaman
           </p>
