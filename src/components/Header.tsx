@@ -83,7 +83,7 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           <Link 
             to="/home" 
-            className="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors duration-300"
+            className="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors duration-300 focus:outline-none focus-visible:outline-2 focus-visible:outline-blue-600 focus-visible:outline-offset-2 rounded-sm"
             aria-label="Go to homepage"
           >
             Shawava<span className="text-blue-600">Tritya</span>
@@ -95,7 +95,7 @@ const Header = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-gray-700 hover:text-blue-600 transition-colors duration-300 relative py-2 px-1 ${
+                className={`text-gray-700 hover:text-blue-600 transition-colors duration-300 relative py-2 px-1 focus:outline-none focus-visible:outline-2 focus-visible:outline-blue-600 focus-visible:outline-offset-2 rounded-sm ${
                   location.pathname === item.path || (location.pathname === '/' && item.path === '/home')
                     ? 'text-blue-600'
                     : ''
@@ -123,7 +123,7 @@ const Header = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={downloadCV}
-              className="hidden md:flex items-center space-x-2 bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="hidden md:flex items-center space-x-2 bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
               aria-label="Download CV"
             >
               <Download size={18} />
@@ -133,7 +133,7 @@ const Header = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden text-gray-700 p-2 hover:bg-gray-100 rounded-lg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="md:hidden text-gray-700 p-2 hover:bg-gray-100 rounded-lg transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
               aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isMobileMenuOpen}
             >
@@ -166,7 +166,7 @@ const Header = () => {
               <span className="text-xl font-bold text-gray-900">Menu</span>
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="p-2 hover:bg-gray-100 rounded-lg transition-colors duration-300"
+                className="p-2 hover:bg-gray-100 rounded-lg transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                 aria-label="Close menu"
               >
                 <X size={24} />
@@ -179,7 +179,7 @@ const Header = () => {
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block py-3 px-4 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 ${
+                  className={`block py-3 px-4 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 ${
                     location.pathname === item.path || (location.pathname === '/' && item.path === '/home')
                       ? 'text-blue-600 font-semibold bg-blue-50'
                       : ''
@@ -200,7 +200,7 @@ const Header = () => {
                     downloadCV();
                     setIsMobileMenuOpen(false);
                   }}
-                  className="w-full flex items-center justify-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                  className="w-full flex items-center justify-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                   aria-label="Download CV"
                 >
                   <Download size={18} />
