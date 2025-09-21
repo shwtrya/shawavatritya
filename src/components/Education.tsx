@@ -153,7 +153,7 @@ const Education = () => {
             transition={{ duration: 0.6 }}
             className="text-2xl font-bold text-gray-900 mb-8 text-center"
           >
-            Keahlian & Kemampuan
+            Keahlian
           </motion.h3>
           
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
