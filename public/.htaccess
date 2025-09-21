@@ -1,4 +1,4 @@
 Options -MultiViews
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ 404.html [QR,L]
+RewriteRule ^ index.html [QR,L]
