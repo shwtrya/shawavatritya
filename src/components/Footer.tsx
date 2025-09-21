@@ -102,7 +102,7 @@ const Footer = () => {
           <p className="text-gray-400 flex items-center justify-center space-x-1">
             <span>© {currentYear} Shawava Tritya. Made with</span>
             <Heart size={16} className="text-red-500" />
-            <span>dan banyak kopi</span>
+            <span>and lots of coffee</span>
           </p>
         </motion.div>
       </div>
