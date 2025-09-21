@@ -61,7 +61,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6 order-1 md:order-2 px-4 md:px-0"
           >
-            <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Perjalanan Saya</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900">My Journey</h3>
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
               Sejak kecil, saya sudah tertarik dengan gadget dan teknologi. Di SMK, saya memilih jurusan 
               Teknik Komputer dan Jaringan untuk mengembangkan kemampuan praktis saya. Selama ini, saya belajar 
