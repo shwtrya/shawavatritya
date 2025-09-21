@@ -58,7 +58,7 @@ const Footer = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="md:text-right"
           >
-            <h4 className="text-lg font-semibold mb-4">Terhubung Dengan Saya</h4>
+            <h4 className="text-lg font-semibold mb-4">Connect with Me</h4>
             <div className="flex md:justify-end space-x-4">
               <motion.a
                 href="https://github.com/CyXd404"
