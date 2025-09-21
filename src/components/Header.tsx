@@ -61,12 +61,12 @@ const Header = () => {
   };
 
   const navItems = [
-    { path: '/home', label: 'Beranda' },
-    { path: '/about', label: 'Tentang' },
-    { path: '/experience', label: 'Pengalaman' },
-    { path: '/projects', label: 'Proyek' },
-    { path: '/education', label: 'Pendidikan' },
-    { path: '/contact', label: 'Kontak' },
+    { path: '/home', label: 'Home' },
+    { path: '/about', label: 'About' },
+    { path: '/experience', label: 'Experience' },
+    { path: '/projects', label: 'Projects' },
+    { path: '/education', label: 'Education' },
+    { path: '/contact', label: 'Contact' },
   ];
 
   return (
