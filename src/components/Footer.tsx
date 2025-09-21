@@ -9,6 +9,7 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
+          {/* Brand & Description */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -24,6 +25,7 @@ const Footer = () => {
             </p>
           </motion.div>
 
+          {/* Quick Links */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -33,24 +35,40 @@ const Footer = () => {
           >
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <div className="space-y-2">
-              <a href="/about" className="block text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus:text-white">
+              <a
+                href="/about"
+                className="block text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus-visible:text-white focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded"
+              >
                 About
               </a>
-              <a href="/experience" className="block text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus:text-white">
+              <a
+                href="/experience"
+                className="block text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus-visible:text-white focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded"
+              >
                 Experience
               </a>
-              <a href="/projects" className="block text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus:text-white">
+              <a
+                href="/projects"
+                className="block text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus-visible:text-white focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded"
+              >
                 Projects
               </a>
-              <a href="/education" className="block text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus:text-white">
+              <a
+                href="/education"
+                className="block text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus-visible:text-white focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded"
+              >
                 Education
               </a>
-              <a href="/contact" className="block text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus:text-white">
+              <a
+                href="/contact"
+                className="block text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus-visible:text-white focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded"
+              >
                 Contact
               </a>
             </div>
           </motion.div>
 
+          {/* Social Links */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -63,7 +81,7 @@ const Footer = () => {
               <motion.a
                 href="https://github.com/CyXd404"
                 whileHover={{ scale: 1.1, y: -2 }}
-                className="text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+                className="text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus-visible:text-white focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit GitHub profile"
@@ -73,7 +91,7 @@ const Footer = () => {
               <motion.a
                 href="https://www.linkedin.com/in/shawava-tritya"
                 whileHover={{ scale: 1.1, y: -2 }}
-                className="text-gray-400 hover:text-blue-400 transition-colors duration-300 focus:outline-none focus:text-blue-400 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+                className="text-gray-400 hover:text-blue-400 transition-colors duration-300 focus:outline-none focus-visible:text-blue-400 focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit LinkedIn profile"
@@ -83,7 +101,7 @@ const Footer = () => {
               <motion.a
                 href="mailto:shawavatritya@gmail.com"
                 whileHover={{ scale: 1.1, y: -2 }}
-                className="text-gray-400 hover:text-emerald-400 transition-colors duration-300 focus:outline-none focus:text-emerald-400 focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+                className="text-gray-400 hover:text-emerald-400 transition-colors duration-300 focus:outline-none focus-visible:text-emerald-400 focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded"
                 aria-label="Send email"
               >
                 <Mail size={24} />
@@ -92,6 +110,7 @@ const Footer = () => {
           </motion.div>
         </div>
 
+        {/* Footer bottom */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
