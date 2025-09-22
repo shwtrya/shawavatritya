@@ -1,31 +1,36 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Education from './components/Education';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
-import NotFound from "./components/NotFound";
+import LoadingSpinner from './components/LoadingSpinner';
+
+// Lazy load components for better performance
+const Hero = lazy(() => import('./components/Hero'));
+const About = lazy(() => import('./components/About'));
+const Experience = lazy(() => import('./components/Experience'));
+const Projects = lazy(() => import('./components/Projects'));
+const Education = lazy(() => import('./components/Education'));
+const Contact = lazy(() => import('./components/Contact'));
+const NotFound = lazy(() => import('./components/NotFound'));
 
 function App() {
   return (
     <Router>
       <div className="min-h-screen bg-white">
         <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/experience" element={<ExperiencePage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/education" element={<EducationPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense fallback={<LoadingSpinner />}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/home" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/experience" element={<ExperiencePage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/education" element={<EducationPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
         <Footer />
       </div>
     </Router>
@@ -57,6 +62,9 @@ function AboutPage() {
       transition={{ duration: 0.6 }}
       className="pt-20"
     >
+      <div className="sr-only">
+        <h1>Tentang Shawava Tritya</h1>
+      </div>
       <About />
     </motion.div>
   );
@@ -70,6 +78,9 @@ function ExperiencePage() {
       transition={{ duration: 0.6 }}
       className="pt-20"
     >
+      <div className="sr-only">
+        <h1>Pengalaman Kerja Shawava Tritya</h1>
+      </div>
       <Experience />
     </motion.div>
   );
@@ -83,6 +94,9 @@ function ProjectsPage() {
       transition={{ duration: 0.6 }}
       className="pt-20"
     >
+      <div className="sr-only">
+        <h1>Proyek Unggulan Shawava Tritya</h1>
+      </div>
       <Projects />
     </motion.div>
   );
@@ -96,6 +110,9 @@ function EducationPage() {
       transition={{ duration: 0.6 }}
       className="pt-20"
     >
+      <div className="sr-only">
+        <h1>Pendidikan dan Keahlian Shawava Tritya</h1>
+      </div>
       <Education />
     </motion.div>
   );
@@ -109,6 +126,9 @@ function ContactPage() {
       transition={{ duration: 0.6 }}
       className="pt-20"
     >
+      <div className="sr-only">
+        <h1>Kontak Shawava Tritya</h1>
+      </div>
       <Contact />
     </motion.div>
   );

@@ -51,11 +51,13 @@ const Projects = () => {
               <div className="relative overflow-hidden">
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={`Screenshot proyek ${project.title} - ${project.description.substring(0, 100)}...`}
+                  width="600"
+                  height="400"
                   className="w-full h-40 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
+                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4" role="group" aria-label="Project actions">
                   <motion.a
                     href={project.liveLink}
                     whileHover={{ scale: 1.1 }}
@@ -81,7 +83,7 @@ const Projects = () => {
                 </div>
               </div>
               <div className="p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2" role="heading" aria-level="3">{project.title}</h3>
                 <p className="text-gray-600 mb-4 text-sm leading-relaxed">{project.description}</p>
                 <div className="flex flex-wrap gap-1 sm:gap-2">
                   {project.tags.map((tag) => (

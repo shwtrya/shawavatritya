@@ -49,6 +49,8 @@ const About = () => {
             <img
               src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"
               alt="Shawava Tritya - Pelajar SMK Teknik Komputer dan Jaringan"
+              width="400"
+              height="400"
               className="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300"
               loading="lazy"
             />
@@ -61,7 +63,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6 order-1 md:order-2 px-4 md:px-0"
           >
-            <h3 className="text-xl sm:text-2xl font-bold text-gray-900">My Journey</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900" role="heading" aria-level="3">Perjalanan Saya</h3>
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
               Sejak kecil, saya sudah tertarik dengan gadget dan teknologi. Di SMK, saya memilih jurusan 
               Teknik Komputer dan Jaringan untuk mengembangkan kemampuan praktis saya. Selama ini, saya belajar 
@@ -98,7 +100,7 @@ const About = () => {
               <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-blue-600 text-white rounded-full mb-4 hover:bg-blue-700 transition-colors duration-300">
                 <feature.icon size={20} className="sm:w-6 sm:h-6" />
               </div>
-              <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">{feature.title}</h4>
+              <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2" role="heading" aria-level="4">{feature.title}</h4>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{feature.description}</p>
             </motion.div>
           ))}

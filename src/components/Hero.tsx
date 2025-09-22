@@ -14,10 +14,11 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-emerald-50 relative overflow-hidden pt-20">
+      <h1 className="sr-only">Shawava Tritya - Portfolio Pelajar SMK Teknik Komputer dan Jaringan</h1>
       {/* Background decoration */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-4 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 bg-blue-200/30 rounded-full mix-blend-multiply filter blur-xl animate-pulse-slow"></div>
-        <div className="absolute bottom-20 right-4 sm:right-10 w-48 h-48 sm:w-72 sm:h-72 bg-emerald-200/30 rounded-full mix-blend-multiply filter blur-xl animate-pulse-slow animation-delay-2000"></div>
+        <div className="absolute top-20 left-4 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 bg-blue-200/30 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
+        <div className="absolute bottom-20 right-4 sm:right-10 w-48 h-48 sm:w-72 sm:h-72 bg-emerald-200/30 rounded-full mix-blend-multiply filter blur-xl animate-float animation-delay-2000"></div>
       </div>
 
       <div className="container-responsive relative z-10">
@@ -27,9 +28,9 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
               Hi, I'm <span className="text-blue-600">Shawava Tritya</span>
-            </h1>
+            </h2>
           </motion.div>
 
           <motion.div
@@ -64,10 +65,10 @@ const Hero = () => {
                     aria-label={`Navigate to ${item.label}: ${item.description}`}
                   >
                     <div className="flex flex-col items-center text-center space-y-2">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-50 group-hover:bg-blue-100 rounded-lg flex items-center justify-center transition-colors duration-300">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-50 group-hover:bg-blue-100 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110">
                         <item.icon size={20} className="text-blue-600 sm:w-6 sm:h-6" />
                       </div>
-                      <h3 className="text-sm sm:text-base font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                      <h3 className="text-sm sm:text-base font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300" role="heading" aria-level="3">
                         {item.label}
                       </h3>
                       <p className="text-xs sm:text-sm text-gray-500 group-hover:text-gray-600 transition-colors duration-300 line-clamp-2">
