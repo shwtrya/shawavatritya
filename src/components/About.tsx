@@ -22,7 +22,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="container-responsive">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -31,8 +31,8 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Me</h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Tentang Saya</h2>
+          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
             Saya adalah pelajar SMK Negeri 1 Cileungsi, jurusan Teknik Komputer dan Jaringan (Pelajar aktif 2023–2026). 
             Saya memiliki minat besar di bidang teknologi, khususnya penggunaan mikrokontroler dan pengolahan data.
           </p>
@@ -63,13 +63,13 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6 order-1 md:order-2 px-4 md:px-0"
           >
-            <h3 className="text-xl sm:text-2xl font-bold text-gray-900" role="heading" aria-level="3">Perjalanan Saya</h3>
-            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white" role="heading" aria-level="3">Perjalanan Saya</h3>
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
               Sejak kecil, saya sudah tertarik dengan gadget dan teknologi. Di SMK, saya memilih jurusan 
               Teknik Komputer dan Jaringan untuk mengembangkan kemampuan praktis saya. Selama ini, saya belajar 
               merakit sistem berbasis Arduino, memonitor suhu dan lampu dari jarak jauh, serta memahami instalasi jaringan.
             </p>
-            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
               Di samping itu, pengalaman kerja 
               dan freelance memberikan saya wawasan tentang dunia industri dan pentingnya ketelitian serta efisiensi.
               Saya selalu berusaha belajar dan berkembang agar siap menghadapi tantangan di dunia profesional.
@@ -78,7 +78,7 @@ const About = () => {
               {['Arduino', 'IoT', 'Data Entry', 'Network Installation', 'Microsoft Office', 'Production'].map((tech) => (
                 <span
                   key={tech}
-                  className="px-3 sm:px-4 py-1 sm:py-2 bg-blue-50 text-blue-700 rounded-full text-xs sm:text-sm font-medium hover:bg-blue-100 transition-colors duration-200"
+                  className="px-3 sm:px-4 py-1 sm:py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-xs sm:text-sm font-medium hover:bg-blue-100 dark:hover:bg-blue-800/50 transition-colors duration-200"
                 >
                   {tech}
                 </span>
@@ -95,13 +95,13 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="text-center p-4 sm:p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300"
+              className="text-center p-4 sm:p-6 rounded-xl bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-300 border border-gray-100 dark:border-gray-700"
             >
-              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-blue-600 text-white rounded-full mb-4 hover:bg-blue-700 transition-colors duration-300">
+              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-blue-600 dark:bg-blue-500 text-white rounded-full mb-4 hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-300">
                 <feature.icon size={20} className="sm:w-6 sm:h-6" />
               </div>
-              <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2" role="heading" aria-level="4">{feature.title}</h4>
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{feature.description}</p>
+              <h4 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2" role="heading" aria-level="4">{feature.title}</h4>
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">{feature.description}</p>
             </motion.div>
           ))}
         </div>

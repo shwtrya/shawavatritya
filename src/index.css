@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+/* CSS Variables for Dark Mode */
+:root {
+  --color-primary: #3B82F6;
+  --color-primary-dark: #60A5FA;
+  --color-background: #FFFFFF;
+  --color-background-secondary: #F9FAFB;
+  --color-text: #111827;
+  --color-text-secondary: #6B7280;
+  --color-border: #E5E7EB;
+}
+
+.dark {
+  --color-primary: #60A5FA;
+  --color-primary-dark: #3B82F6;
+  --color-background: #111827;
+  --color-background-secondary: #1F2937;
+  --color-text: #F9FAFB;
+  --color-text-secondary: #D1D5DB;
+  --color-border: #374151;
+}
+
 /* Import Inter font for better typography */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -22,6 +43,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Screen reader only content */
@@ -78,11 +100,22 @@ a:focus-visible {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
+.dark .glass-card {
+  background: rgba(17, 24, 39, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
 .glass-nav {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass-nav {
+  background: rgba(17, 24, 39, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Custom animations */
@@ -174,6 +207,12 @@ a:focus-visible {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+  
+  /* Preserve theme transition even in reduced motion */
+  body,
+  .dark body {
+    transition: background-color 0.3s ease, color 0.3s ease !important;
+  }
 }
 
 /* Custom gradient backgrounds */
@@ -264,13 +303,25 @@ img[loading="lazy"]:not([src]) {
   background: #f1f1f1;
 }
 
+.dark ::-webkit-scrollbar-track {
+  background: #374151;
+}
+
 ::-webkit-scrollbar-thumb {
   background: #c1c1c1;
   border-radius: 4px;
 }
 
+.dark ::-webkit-scrollbar-thumb {
+  background: #6B7280;
+}
+
 ::-webkit-scrollbar-thumb:hover {
   background: #a8a8a8;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
 }
 
 /* Print styles */
@@ -303,12 +354,24 @@ img[loading="lazy"]:not([src]) {
     background-color: white;
   }
   
+  .dark .bg-gray-50 {
+    background-color: black;
+  }
+  
   .text-gray-600 {
     color: black;
   }
   
+  .dark .text-gray-600 {
+    color: white;
+  }
+  
   .border-gray-100 {
     border-color: #000;
+  }
+  
+  .dark .border-gray-100 {
+    border-color: #fff;
   }
 }
 
@@ -333,4 +396,35 @@ img[loading="lazy"]:not([src]) {
     min-height: 44px;
     min-width: 44px;
   }
+}
+
+/* Dark mode specific improvements */
+.dark {
+  color-scheme: dark;
+}
+
+.dark img {
+  opacity: 0.9;
+}
+
+.dark img:hover {
+  opacity: 1;
+}
+
+/* Timeline specific styles */
+.timeline-dot {
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.dark .timeline-dot {
+  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.1);
+}
+
+/* Chart.js dark mode support */
+.dark .chartjs-render-monitor {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+.dark .chartjs-render-monitor canvas {
+  filter: invert(1) hue-rotate(180deg);
 }

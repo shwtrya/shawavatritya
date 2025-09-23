@@ -60,7 +60,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
       <div className="container-responsive">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -69,8 +69,8 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get touch Me</h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Hubungi Saya</h2>
+          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
             Punya proyek atau ingin berkolaborasi? Saya senang mendengar dari Anda!
           </p>
         </motion.div>
@@ -86,8 +86,8 @@ const Contact = () => {
           >
             <div className="space-y-8">
               <div>
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Mari diskusikan proyek Anda</h3>
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4">Mari diskusikan proyek Anda</h3>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
                   Saya selalu tertarik dengan peluang baru dan proyek yang menarik. 
                   Baik Anda membutuhkan bantuan dalam bidang teknologi, data entry, atau 
                   instalasi jaringan, saya siap membantu dengan kemampuan terbaik saya.
@@ -100,18 +100,18 @@ const Contact = () => {
                     key={info.title}
                     href={info.link}
                     whileHover={{ x: 5, scale: 1.02 }}
-                    className="flex items-center space-x-4 p-4 sm:p-5 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 group focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                    className="flex items-center space-x-4 p-4 sm:p-5 bg-white dark:bg-gray-900 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 group focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 border border-gray-100 dark:border-gray-700"
                     {...(info.link.startsWith('http') && {
                       target: '_blank',
                       rel: 'noopener noreferrer'
                     })}
                   >
-                    <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-blue-600 group-hover:bg-blue-700 text-white rounded-lg flex items-center justify-center transition-colors duration-300">
+                    <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-blue-600 dark:bg-blue-500 group-hover:bg-blue-700 dark:group-hover:bg-blue-600 text-white rounded-lg flex items-center justify-center transition-colors duration-300">
                       <info.icon size={18} className="sm:w-5 sm:h-5" />
                     </div>
                     <div>
-                      <h4 className="text-sm sm:text-base text-gray-900 font-semibold">{info.title}</h4>
-                      <p className="text-xs sm:text-sm text-gray-600">{info.value}</p>
+                      <h4 className="text-sm sm:text-base text-gray-900 dark:text-white font-semibold">{info.title}</h4>
+                      <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300">{info.value}</p>
                     </div>
                   </motion.a>
                 ))}
@@ -141,14 +141,14 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             className="px-4 lg:px-0"
           >
-            <form onSubmit={handleSubmit} className="bg-white p-6 sm:p-8 rounded-xl shadow-lg space-y-6">
+            <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg space-y-6 border border-gray-100 dark:border-gray-700">
               {submitStatus === 'success' && (
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="p-4 bg-green-50 border border-green-200 rounded-lg"
+                  className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg"
                 >
-                  <p className="text-green-800 text-sm">Terima kasih! Pesan Anda telah berhasil dikirim.</p>
+                  <p className="text-green-800 dark:text-green-300 text-sm">Terima kasih! Pesan Anda telah berhasil dikirim.</p>
                 </motion.div>
               )}
               
@@ -156,16 +156,16 @@ const Contact = () => {
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="p-4 bg-red-50 border border-red-200 rounded-lg"
+                  className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg"
                 >
-                  <p className="text-red-800 text-sm">Maaf, terjadi kesalahan saat mengirim pesan. Silakan coba lagi.</p>
+                  <p className="text-red-800 dark:text-red-300 text-sm">Maaf, terjadi kesalahan saat mengirim pesan. Silakan coba lagi.</p>
                 </motion.div>
               )}
 
               {/* FORM FIELDS */}
               <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm sm:text-base text-gray-700 font-medium mb-2">
+                  <label htmlFor="name" className="block text-sm sm:text-base text-gray-700 dark:text-gray-300 font-medium mb-2">
                     Nama
                   </label>
                   <input
@@ -176,12 +176,12 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     disabled={isSubmitting}
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 focus:border-transparent transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder="Nama Anda"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm sm:text-base text-gray-700 font-medium mb-2">
+                  <label htmlFor="email" className="block text-sm sm:text-base text-gray-700 dark:text-gray-300 font-medium mb-2">
                     Email
                   </label>
                   <input
@@ -192,14 +192,14 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     disabled={isSubmitting}
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 focus:border-transparent transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder="email.anda@example.com"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm sm:text-base text-gray-700 font-medium mb-2">
+                <label htmlFor="subject" className="block text-sm sm:text-base text-gray-700 dark:text-gray-300 font-medium mb-2">
                   Subjek
                 </label>
                 <input
@@ -210,13 +210,13 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 focus:border-transparent transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Tentang apa ini?"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm sm:text-base text-gray-700 font-medium mb-2">
+                <label htmlFor="message" className="block text-sm sm:text-base text-gray-700 dark:text-gray-300 font-medium mb-2">
                   Pesan
                 </label>
                 <textarea
@@ -227,7 +227,7 @@ const Contact = () => {
                   required
                   rows={5}
                   disabled={isSubmitting}
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-300 resize-none disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 focus:border-transparent transition-all duration-300 resize-none disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Ceritakan tentang proyek Anda..."
                 />
               </div>
@@ -237,7 +237,7 @@ const Contact = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 disabled={isSubmitting}
-                className="w-full bg-blue-600 text-white py-2 sm:py-3 px-6 rounded-lg text-sm sm:text-base font-semibold hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                className="w-full bg-blue-600 dark:bg-blue-500 text-white py-2 sm:py-3 px-6 rounded-lg text-sm sm:text-base font-semibold hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
               >
                 <Send size={18} className="sm:w-5 sm:h-5" />
                 <span>{isSubmitting ? 'Mengirim...' : 'Kirim Pesan'}</span>

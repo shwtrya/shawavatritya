@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Menu, X, Download } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -76,17 +77,17 @@ const Header = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        isScrolled ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}
     >
       <div className="container-responsive">
         <div className="flex justify-between items-center py-4">
           <Link 
             to="/home" 
-            className="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors duration-300 focus:outline-none focus-visible:outline-2 focus-visible:outline-blue-600 focus-visible:outline-offset-2 rounded-sm"
+            className="text-2xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 focus:outline-none focus-visible:outline-2 focus-visible:outline-blue-600 focus-visible:outline-offset-2 rounded-sm"
             aria-label="Go to homepage"
           >
-            Shawava<span className="text-blue-600">Tritya</span>
+            Shawava<span className="text-blue-600 dark:text-blue-400">Tritya</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -96,8 +97,9 @@ const Header = () => {
                 key={item.path}
                 to={item.path}
                 className={`text-gray-700 hover:text-blue-600 transition-colors duration-300 relative py-2 px-1 focus:outline-none focus-visible:outline-2 focus-visible:outline-blue-600 focus-visible:outline-offset-2 rounded-sm ${
+                className={`text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 relative py-2 px-1 focus:outline-none focus-visible:outline-2 focus-visible:outline-blue-600 focus-visible:outline-offset-2 rounded-sm ${
                   location.pathname === item.path || (location.pathname === '/' && item.path === '/home')
-                    ? 'text-blue-600'
+                    ? 'text-blue-600 dark:text-blue-400'
                     : ''
                 }`}
                 aria-current={
@@ -110,7 +112,7 @@ const Header = () => {
                 {(location.pathname === item.path || (location.pathname === '/' && item.path === '/home')) && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-blue-600"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-blue-600 dark:bg-blue-400"
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -119,6 +121,7 @@ const Header = () => {
           </nav>
 
           <div className="flex items-center space-x-4">
+            <ThemeToggle />
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -133,7 +136,7 @@ const Header = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden text-gray-700 p-2 hover:bg-gray-100 rounded-lg transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+             className="md:hidden text-gray-700 dark:text-gray-300 p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
               aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isMobileMenuOpen}
             >
@@ -160,13 +163,14 @@ const Header = () => {
           exit={{ opacity: 0, x: '100%' }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
           className="fixed top-0 right-0 h-full w-80 max-w-[80vw] bg-white shadow-xl z-50 md:hidden"
+          className="fixed top-0 right-0 h-full w-80 max-w-[80vw] bg-white dark:bg-gray-800 shadow-xl z-50 md:hidden"
         >
           <div className="p-6">
             <div className="flex justify-between items-center mb-8">
-              <span className="text-xl font-bold text-gray-900">Menu</span>
+              <span className="text-xl font-bold text-gray-900 dark:text-white">Menu</span>
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="p-2 hover:bg-gray-100 rounded-lg transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                 aria-label="Close menu"
               >
                 <X size={24} />
@@ -179,9 +183,9 @@ const Header = () => {
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block py-3 px-4 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 ${
+                  className={`block py-3 px-4 rounded-lg text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 ${
                     location.pathname === item.path || (location.pathname === '/' && item.path === '/home')
-                      ? 'text-blue-600 font-semibold bg-blue-50'
+                      ? 'text-blue-600 dark:text-blue-400 font-semibold bg-blue-50 dark:bg-blue-900/20'
                       : ''
                   }`}
                   aria-current={
@@ -194,7 +198,7 @@ const Header = () => {
                 </Link>
               ))}
               
-              <div className="pt-4 border-t border-gray-200">
+              <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
                 <button
                   onClick={() => {
                     downloadCV();

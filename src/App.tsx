@@ -1,9 +1,11 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { ThemeProvider } from './contexts/ThemeContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
+import Timeline from './components/Timeline';
 
 // Lazy load components for better performance
 const Hero = lazy(() => import('./components/Hero'));
@@ -16,24 +18,26 @@ const NotFound = lazy(() => import('./components/NotFound'));
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-white">
-        <Header />
-        <Suspense fallback={<LoadingSpinner />}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/home" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/experience" element={<ExperiencePage />} />
-            <Route path="/projects" element={<ProjectsPage />} />
-            <Route path="/education" element={<EducationPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
-        <Footer />
-      </div>
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+          <Header />
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/home" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/experience" element={<ExperiencePage />} />
+              <Route path="/projects" element={<ProjectsPage />} />
+              <Route path="/education" element={<EducationPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+          <Footer />
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }
 
@@ -47,6 +51,7 @@ function HomePage() {
       <Hero />
       <About />
       <Experience />
+      <Timeline />
       <Projects />
       <Education />
       <Contact />
