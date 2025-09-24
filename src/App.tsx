@@ -5,7 +5,14 @@ import { ThemeProvider } from './contexts/ThemeContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
-import Timeline from './components/Timeline';
+import Timeline3D from './components/Timeline3D';
+import AIAssistant from './components/AIAssistant';
+import VirtualGallery from './components/VirtualGallery';
+import Gamification from './components/Gamification';
+import BeforeAfterSlider from './components/BeforeAfterSlider';
+import DynamicTheme from './components/DynamicTheme';
+import InteractiveSkillMap from './components/InteractiveSkillMap';
+import CustomLoadingScreen from './components/CustomLoadingScreen';
 
 // Lazy load components for better performance
 const Hero = lazy(() => import('./components/Hero'));
@@ -18,11 +25,25 @@ const NotFound = lazy(() => import('./components/NotFound'));
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
+
+  if (isLoading) {
+    return (
+      <ThemeProvider>
+        <CustomLoadingScreen onLoadingComplete={handleLoadingComplete} />
+      </ThemeProvider>
+    );
+  }
 
   return (
     <ThemeProvider>
       <Router>
         <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+          <DynamicTheme />
           <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
@@ -36,6 +57,7 @@ function App() {
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
+          <AIAssistant />
           <Footer />
         </div>
       </Router>
@@ -53,7 +75,11 @@ function HomePage() {
       <Hero />
       <About />
       <Experience />
-      <Timeline />
+      <Timeline3D />
+      <VirtualGallery />
+      <BeforeAfterSlider />
+      <Gamification />
+      <InteractiveSkillMap />
       <Projects />
       <Education />
       <Contact />
