@@ -1,6 +1,6 @@
-import React, { useRef, useMemo } from 'react';
+import React, { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Text, OrbitControls, Sphere, Box } from '@react-three/drei';
+import { Text, OrbitControls, Sphere } from '@react-three/drei';
 import { motion } from 'framer-motion';
 import * as THREE from 'three';
 
@@ -96,7 +96,7 @@ const Timeline3D = () => {
 
   return (
     <section className="py-20 bg-black text-white min-h-screen">
-      <div className="container-responsive">
+      <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -112,7 +112,7 @@ const Timeline3D = () => {
           <Canvas camera={{ position: [0, 0, 8], fov: 60 }}>
             <ambientLight intensity={0.5} />
             <pointLight position={[10, 10, 10]} />
-            <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
+            <OrbitControls enablePan enableZoom enableRotate />
             
             {timelineData.map((item, index) => (
               <TimelineNode key={item.id} item={item} isActive={index === 2} />
@@ -123,21 +123,23 @@ const Timeline3D = () => {
               if (index < timelineData.length - 1) {
                 const nextItem = timelineData[index + 1];
                 return (
-                  <Box
+                  <mesh
                     key={`line-${index}`}
                     position={[
                       (item.position[0] + nextItem.position[0]) / 2,
                       (item.position[1] + nextItem.position[1]) / 2,
                       (item.position[2] + nextItem.position[2]) / 2
                     ]}
-                    args={[
-                      Math.abs(nextItem.position[0] - item.position[0]) || 0.1,
-                      0.05,
-                      0.05
-                    ]}
                   >
+                    <boxGeometry
+                      args={[
+                        Math.abs(nextItem.position[0] - item.position[0]) || 0.1,
+                        0.05,
+                        0.05
+                      ]}
+                    />
                     <meshStandardMaterial color="#444" />
-                  </Box>
+                  </mesh>
                 );
               }
               return null;
@@ -146,7 +148,9 @@ const Timeline3D = () => {
         </div>
 
         <div className="mt-8 text-center">
-          <p className="text-gray-400">Drag untuk memutar • Scroll untuk zoom • Klik dan drag untuk menggeser</p>
+          <p className="text-gray-400">
+            Drag untuk memutar • Scroll untuk zoom • Klik dan drag untuk menggeser
+          </p>
         </div>
       </div>
     </section>
