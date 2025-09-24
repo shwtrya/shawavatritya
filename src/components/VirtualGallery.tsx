@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Text, Box, Plane } from '@react-three/drei';
+import { OrbitControls, Text } from '@react-three/drei';
 import { motion } from 'framer-motion';
 import * as THREE from 'three';
 
@@ -19,7 +19,8 @@ const GalleryFrame: React.FC<{ item: GalleryItem; onClick: () => void }> = ({ it
   useFrame((state) => {
     if (meshRef.current) {
       meshRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.5) * 0.1;
-      meshRef.current.position.y = item.position[1] + Math.sin(state.clock.elapsedTime + item.position[0]) * 0.1;
+      meshRef.current.position.y =
+        item.position[1] + Math.sin(state.clock.elapsedTime + item.position[0]) * 0.1;
     }
   });
 
@@ -32,15 +33,17 @@ const GalleryFrame: React.FC<{ item: GalleryItem; onClick: () => void }> = ({ it
       onClick={onClick}
     >
       {/* Frame */}
-      <Box args={[2.2, 1.7, 0.1]} position={[0, 0, -0.05]}>
+      <mesh position={[0, 0, -0.05]}>
+        <boxGeometry args={[2.2, 1.7, 0.1]} />
         <meshStandardMaterial color={hovered ? '#FFD700' : '#8B4513'} />
-      </Box>
-      
+      </mesh>
+
       {/* Image placeholder */}
-      <Plane args={[2, 1.5]}>
+      <mesh>
+        <planeGeometry args={[2, 1.5]} />
         <meshStandardMaterial color={hovered ? '#E0E0E0' : '#F0F0F0'} />
-      </Plane>
-      
+      </mesh>
+
       {/* Title */}
       <Text
         position={[0, -1.2, 0.1]}
@@ -64,41 +67,41 @@ const VirtualGallery = () => {
       title: 'Smart Home Arduino',
       image: 'arduino-project.jpg',
       description: 'Sistem IoT untuk monitoring dan kontrol rumah pintar',
-      position: [-3, 0, 0]
+      position: [-3, 0, 0],
     },
     {
       id: '2',
       title: 'Network Installation',
       image: 'network-project.jpg',
       description: 'Instalasi jaringan ISP dengan uptime 99.8%',
-      position: [0, 0, 0]
+      position: [0, 0, 0],
     },
     {
       id: '3',
       title: 'Data Entry System',
       image: 'data-project.jpg',
       description: 'Sistem pengolahan data dengan akurasi tinggi',
-      position: [3, 0, 0]
+      position: [3, 0, 0],
     },
     {
       id: '4',
       title: 'Production Line',
       image: 'production-project.jpg',
       description: 'Optimasi proses produksi dengan quality control',
-      position: [-1.5, 2, -2]
+      position: [-1.5, 2, -2],
     },
     {
       id: '5',
       title: 'IoT Monitoring',
       image: 'iot-project.jpg',
       description: 'Sistem monitoring real-time berbasis IoT',
-      position: [1.5, 2, -2]
-    }
+      position: [1.5, 2, -2],
+    },
   ];
 
   return (
     <section className="py-20 bg-gradient-to-b from-gray-900 to-black text-white min-h-screen">
-      <div className="container-responsive">
+      <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -107,7 +110,9 @@ const VirtualGallery = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-4">Virtual Gallery</h2>
-          <p className="text-lg text-gray-300">Jelajahi portofolio saya dalam ruang virtual 3D</p>
+          <p className="text-lg text-gray-300">
+            Jelajahi portofolio saya dalam ruang virtual 3D
+          </p>
         </motion.div>
 
         <div className="h-96 w-full mb-8">
@@ -115,25 +120,27 @@ const VirtualGallery = () => {
             <ambientLight intensity={0.4} />
             <pointLight position={[10, 10, 10]} intensity={1} />
             <pointLight position={[-10, -10, -10]} intensity={0.5} />
-            
-            <OrbitControls 
-              enablePan={true} 
-              enableZoom={true} 
+
+            <OrbitControls
+              enablePan={true}
+              enableZoom={true}
               enableRotate={true}
               maxDistance={15}
               minDistance={3}
             />
-            
+
             {/* Gallery Floor */}
-            <Plane args={[20, 20]} rotation={[-Math.PI / 2, 0, 0]} position={[0, -3, 0]}>
+            <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -3, 0]}>
+              <planeGeometry args={[20, 20]} />
               <meshStandardMaterial color="#1a1a1a" />
-            </Plane>
-            
+            </mesh>
+
             {/* Gallery Walls */}
-            <Plane args={[20, 10]} position={[0, 2, -5]}>
+            <mesh position={[0, 2, -5]}>
+              <planeGeometry args={[20, 10]} />
               <meshStandardMaterial color="#2a2a2a" />
-            </Plane>
-            
+            </mesh>
+
             {galleryItems.map((item) => (
               <GalleryFrame
                 key={item.id}
@@ -145,7 +152,9 @@ const VirtualGallery = () => {
         </div>
 
         <div className="text-center mb-8">
-          <p className="text-gray-400">Klik pada frame untuk melihat detail • Drag untuk melihat sekeliling • Scroll untuk zoom</p>
+          <p className="text-gray-400">
+            Klik pada frame untuk melihat detail • Drag untuk melihat sekeliling • Scroll untuk zoom
+          </p>
         </div>
 
         {/* Selected Item Details */}
